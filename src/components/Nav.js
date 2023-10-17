@@ -6,7 +6,7 @@ const Nav = (props) => {
       <nav class="navbar navbar-dark bg-black">
         <div class="container-fluid">
           <a class="navbar-brand" href="/">APOD Home</a>
-          <a class="nav-link" href="/epic">EPIC</a>
+          <a class="nav-link" href="/imageSearch">Nasa Image Search</a>
         </div>
       </nav>
     

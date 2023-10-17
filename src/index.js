@@ -9,6 +9,7 @@ import Body from './components/Body';
 import BodyHooks from './components/BodyHooks';
 import IndexRoute from './components/IndexRoute';
 import APOD from './components/APOD';
+import ImageSearchPage from './components/ImageSearchPage';
 
 const router = createBrowserRouter([
   {
@@ -21,8 +22,8 @@ const router = createBrowserRouter([
         element: <APOD />
       },
       {
-        path: "epic",
-        element: <BodyHooks />,
+        path: "imageSearch",
+        element: <ImageSearchPage />,
       }
     ],
   },
