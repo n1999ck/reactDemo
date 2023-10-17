@@ -8,6 +8,7 @@ import ErrorNotFound from './components/ErrorNotFound';
 import Body from './components/Body';
 import BodyHooks from './components/BodyHooks';
 import IndexRoute from './components/IndexRoute';
+import APOD from './components/APOD';
 
 const router = createBrowserRouter([
   {
@@ -17,15 +18,11 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <IndexRoute />
+        element: <APOD />
       },
       {
-        path: "hooks",
+        path: "epic",
         element: <BodyHooks />,
-      },
-      {
-        path: "classState",
-        element: <Body />
       }
     ],
   },

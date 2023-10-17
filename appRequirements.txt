@@ -1,6 +1,7 @@
 - APOD + one other API from NASA
 - React router to create at least homepage and one additional page
 - APOD can be on homepage and other api on addl page
+
 You are to follow along with the tutorial on the React lectures and complete an application for the lectures.
 You can either use the XKCD comic or the NASA api to create a web app that loads and displays the information for the APIs. 
 The information being displayed, title, image, description, date, etc, should be properly formatted and use bootstrap to display it.

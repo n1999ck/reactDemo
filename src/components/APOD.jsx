@@ -6,23 +6,16 @@ class Body extends Component{
     constructor(props){
         super(props)
         this.state = {
-            count: 0,
             APOD: {}
         }
     }
-
-    // componentDidUpdate(prevProps, prevState){
-    //     console.log(prevState)
-    //     console.log(this.state)
-    // }
-
+    
+    //When page loads, call APOD API
     componentDidMount(){
         //axios api call
         axios.get('https://api.nasa.gov/planetary/apod?api_key=O6WqJw9BMceGV0Ny79hoBa934YAYs1HWKs5ycCk7')
             .then((response) => {
-                console.log("Success")
-                console.log(response.data)
-                this.setState({vehicle: response.data})  
+                this.setState({APOD: response.data})  
             })
             .catch(function(error){
                 console.log(error);
@@ -31,18 +24,16 @@ class Body extends Component{
     
 
     render(){
-        const {vehicle} = this.state
+        const {APOD} = this.state
 
-        const increment = () => {
-            console.log("Made it!!!!")
-            this.setState({count: this.state.count + 1})
-        }
+        
         return(
             <React.Fragment>
-            <button type="button" className="btn btn-outline-primary" onClick={increment}>
-                {this.state.count}
-            </button>
-            <p>{vehicle.make_and_model}</p>
+                <div class="container my-3">
+                    <h1>{APOD.title}</h1>
+                    <img src={APOD.url} class="img-fluid rounded-top " alt="" />
+                    <p>{APOD.explanation}</p>
+                </div>
             </React.Fragment>
         )
     }
