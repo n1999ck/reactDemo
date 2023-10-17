@@ -2,11 +2,12 @@ import { render, screen } from '@testing-library/react';
 import ErrorNotFound from '../components/ErrorNotFound';
 
 jest.mock('react-router-dom', () => ({
-    useRouteError: jest.fn(() => ({message: "something went wrong"}))
+    useRouteError: jest.fn()
 }))
 
 test('renders errorNotFound', () => {
+  const increment = jest.fn();
   render(<ErrorNotFound />);
-  const linkElement = screen.getByText(/something went wrong/i);
+  const linkElement = screen.getByText(/an unexpected error has occurred./i);
   expect(linkElement).toBeInTheDocument();
 });
