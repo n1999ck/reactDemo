@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import ErrorNotFound from '../components/ErrorNotFound';
+import ErrorNotFound from '../src/components/ErrorNotFound';
 
 jest.mock('react-router-dom', () => ({
     useRouteError: jest.fn()

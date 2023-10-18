@@ -10,3 +10,4 @@ container will look good with any of the sizes listed.
 The other thing is we will be deploying these sites.
 Look at the tutorial for deploying the application so that the website is live.
 You will also create some Jest and Cypress test cases for you application
+aim to test 80% or more of application

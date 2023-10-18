@@ -1,9 +1,10 @@
-import Search from './Search'
+import Search from './Search';
+import React from 'react';
 
 function ImageSearchPage() {
-    return(
-        <Search />
-    )
+  return (
+    <Search />
+  );
 }
 
-export default ImageSearchPage
+export default ImageSearchPage;
