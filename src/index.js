@@ -5,7 +5,7 @@ import App from './App';
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 import ErrorNotFound from './components/ErrorNotFound';
 import APOD from './components/APOD';
-import ImageSearchPage from './components/ImageSearchPage';
+import Search from './components/Search';
 
 const router = createBrowserRouter([
   {
@@ -19,7 +19,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'imageSearch',
-        element: <ImageSearchPage />,
+        element: <Search />,
       },
     ],
   },

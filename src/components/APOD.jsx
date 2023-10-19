@@ -32,7 +32,7 @@ class Body extends Component {
       <React.Fragment>
         <div className="container-fluid my-5">
           <h1 className='pb-5'>{APOD.title}</h1>
-          <img src={APOD.url} className="img-fluid" alt={APOD.title} />
+          <img src={APOD.url} className="img-fluid h-100" alt={APOD.title} />
           <p className='py-3'>{APOD.explanation}</p>
         </div>
       </React.Fragment>

@@ -6,8 +6,8 @@ import axios from 'axios';
 
 // Gets user search query, uses it in NASA image search endpoint
 // https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf
-// it was a mistake to do this instead of something simpler
-
+// it was a mistake to start with something this complex
+// Probably should be separated out into different components
 function Search() {
   const [searchInput, setSearchInput] = useState('');
   const [results, setResults] = useState([]);
@@ -31,9 +31,7 @@ function Search() {
     axios
         .get(apiURL)
         .then((response) => {
-          console.log(response.data.collection.items.length);
           setResults(response.data.collection.items[0].data[0]);
-          console.log(results);
           getImageUrl(results.nasa_id);
         })
         .catch(function(error) {
@@ -41,7 +39,7 @@ function Search() {
         });
   }
 
-  // Sends nasa image ID to API for image file urls
+  // Sends nasa image ID to their image hosting API for image file urls
   function getImageUrl(nasaId) {
     const assetManifestUrl = imageURLBase + nasaId;
     axios
