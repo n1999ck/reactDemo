@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 import Search from './Search';
 import React from 'react';
 

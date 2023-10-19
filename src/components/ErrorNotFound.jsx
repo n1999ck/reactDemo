@@ -1,4 +1,7 @@
-import { useRouteError } from "react-router-dom";
+/* eslint-disable require-jsdoc */
+import {useRouteError} from 'react-router-dom';
+import React from 'react';
+
 
 function ErrorNotFound() {
   const error = useRouteError();
@@ -15,4 +18,4 @@ function ErrorNotFound() {
   );
 }
 
-export default ErrorNotFound
+export default ErrorNotFound;

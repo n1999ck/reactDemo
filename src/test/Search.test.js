@@ -1,6 +1,6 @@
 import {render, screen} from '@testing-library/react';
 import Search from '../src/components/Search';
-
+import React from 'react';
 
 test('renders learn react link', () => {
   render(<Search />);
