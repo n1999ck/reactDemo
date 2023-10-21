@@ -11,3 +11,9 @@ The other thing is we will be deploying these sites.
 Look at the tutorial for deploying the application so that the website is live.
 You will also create some Jest and Cypress test cases for you application
 aim to test 80% or more of application
+
+Web app compiles and runs. Code looks neat and is orderly   50%
+Bootstrap was used for the app 	10%
+Web app contains Jest Testing 	15%
+Web app contains Cypress Testing 	15%
+Web app is deployed 	10%

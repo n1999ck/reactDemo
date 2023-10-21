@@ -1,27 +1,23 @@
 /* eslint-disable require-jsdoc */
-import React, {Component} from 'react';
+import React, {Component, useEffect, useState} from 'react';
 import axios from 'axios';
 
-class Body extends Component {
-// Because we're returning more than just HTML we're using class, methods
-  constructor(props) {
-    super(props);
-    this.state = {
-      APOD: {},
-    };
-  }
 
-  // When page loads, call APOD API
-  componentDidMount() {
-    // axios api call
+
+
+function APOD() {
+
+  const [data, setData] = useState({});
+
+  useEffect(() => {
     axios.get('https://api.nasa.gov/planetary/apod?api_key=O6WqJw9BMceGV0Ny79hoBa934YAYs1HWKs5ycCk7')
         .then((response) => {
-          this.setState({APOD: response.data});
+          setData({APOD: response.data});
         })
         .catch(function(error) {
           console.log(error);
-        });
-  }
+        });   
+  })
 
 
   render() {
