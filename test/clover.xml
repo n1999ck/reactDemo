@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1698005511817" clover="3.2.0">
-  <project timestamp="1698005511817" name="All files">
+<coverage generated="1698417519317" clover="3.2.0">
+  <project timestamp="1698417519317" name="All files">
     <metrics statements="42" coveredstatements="23" conditionals="9" coveredconditionals="4" methods="18" coveredmethods="11" elements="69" coveredelements="38" complexity="0" loc="42" ncloc="42" packages="2" files="7" classes="7"/>
     <package name="src">
       <metrics statements="12" coveredstatements="1" conditionals="4" coveredconditionals="0" methods="3" coveredmethods="1"/>
@@ -49,15 +49,15 @@
       </file>
       <file name="Search.jsx" path="/home/nick/Documents/Code/reactDemo/src/components/Search.jsx">
         <metrics statements="20" coveredstatements="12" conditionals="2" coveredconditionals="1" methods="9" coveredmethods="4"/>
-        <line num="12" count="6" type="stmt"/>
-        <line num="13" count="6" type="stmt"/>
-        <line num="14" count="6" type="stmt"/>
-        <line num="18" count="6" type="stmt"/>
-        <line num="21" count="6" type="stmt"/>
-        <line num="25" count="2" type="stmt"/>
-        <line num="26" count="2" type="stmt"/>
-        <line num="30" count="2" type="stmt"/>
-        <line num="31" count="2" type="stmt"/>
+        <line num="12" count="8" type="stmt"/>
+        <line num="13" count="8" type="stmt"/>
+        <line num="14" count="8" type="stmt"/>
+        <line num="18" count="8" type="stmt"/>
+        <line num="21" count="8" type="stmt"/>
+        <line num="25" count="3" type="stmt"/>
+        <line num="26" count="3" type="stmt"/>
+        <line num="30" count="3" type="stmt"/>
+        <line num="31" count="3" type="stmt"/>
         <line num="34" count="0" type="stmt"/>
         <line num="35" count="0" type="stmt"/>
         <line num="38" count="0" type="stmt"/>
@@ -65,10 +65,10 @@
         <line num="45" count="0" type="stmt"/>
         <line num="48" count="0" type="stmt"/>
         <line num="51" count="0" type="stmt"/>
-        <line num="56" count="6" type="stmt"/>
-        <line num="57" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="56" count="8" type="stmt"/>
+        <line num="57" count="5" type="cond" truecount="1" falsecount="1"/>
         <line num="58" count="0" type="stmt"/>
-        <line num="64" count="6" type="stmt"/>
+        <line num="64" count="8" type="stmt"/>
       </file>
     </package>
   </project>

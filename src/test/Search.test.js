@@ -40,17 +40,58 @@ test('submitSearch executes correctly', async () => {
   jest.spyOn(axios, 'get').mockImplementation(mockAxiosGet);
 
   // Make sample URL
-  const expectedURL = 'https://images-api.nasa.gov/search?media_type=image&page=1&q=term';
+  const sampleURL = 'https://images-api.nasa.gov/search?media_type=image&page=1&q=comet';
 
   // Render with empty submitSearch function
   const {getByText, getByPlaceholderText} =
-    render(<Search submitSearch={() => {}} />);
+    render(<Search submitSearch={() => {}} getImageUrl={() => {}} />);
 
   // Changes search input value
   const searchInput = getByPlaceholderText('Search');
-  fireEvent.change(searchInput, {target: {value: 'term'}});
+  fireEvent.change(searchInput, {target: {value: 'comet'}});
+
 
   // 'Click' the submit button
   fireEvent.click(getByText('Submit'));
-  expect(axios.get).toHaveBeenCalledWith(expectedURL);
+  expect(axios.get).toHaveBeenCalledWith(sampleURL);
+});
+
+test('Image grabber functions correctly', async () => {
+  // Mock axios get
+  const mockAxiosGet = jest.fn();
+  jest.spyOn(axios, 'get').mockImplementation(mockAxiosGet);
+
+  // Sample ID and the URL that it would generate
+  // const sampleNasaId = 'PIA17666';
+  const sampleAssetManifestUrl = 'https://images-api.nasa.gov/asset/PIA17666';
+  const sampleURL = 'https://images-api.nasa.gov/search?media_type=image&page=1&q=comet';
+
+  // Render with empty submitSearch function
+  const {getByText, getByPlaceholderText} =
+    render(<Search submitSearch={() => {}} getImageUrl={() => {}} />);
+
+  // Fake return
+  // const sampleReturn = {
+  //   'collection': {
+  //     'href': 'www.somewhere.com',
+  //     'items': [
+  //       {
+  //         'data': {
+
+  //           'url': 'somewebsite.somewhere/someimage.somefileformat',
+  //           'nasa_id': 'PIA17666',
+  //           'title': 'Sample Title',
+  //         },
+  //       },
+  //     ],
+  //   },
+  // };
+  // Changes search input value
+  const searchInput = getByPlaceholderText('Search');
+  fireEvent.change(searchInput, {target: {value: 'comet'}});
+
+  // 'Click' the submit button
+  fireEvent.click(getByText('Submit'));
+  expect(axios.get).toHaveBeenCalledWith(sampleURL);
+  expect(axios.get).toHaveBeenCalledWith(sampleAssetManifestUrl);
 });
