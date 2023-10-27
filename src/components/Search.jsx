@@ -45,10 +45,7 @@ function Search() {
     axios
         .get(assetManifestUrl)
         .then((response) => {
-          console.log('Getting image url');
-          setImageURL(response.data.collection.items[0].href);
-          console.log(imageURL);
-          
+          setImageURL(response.data.collection.items[0].href);         
         })
         .catch(function(error) {
           console.log(error);
@@ -57,7 +54,6 @@ function Search() {
 
   //finds the image url from the results
   useEffect(() => {
-    console.log(results);
     if(results.length != 0){
       getImageUrl(results.nasa_id);
     }
@@ -80,13 +76,13 @@ function Search() {
             <button 
               className='btn btn-outline-primary'
               onClick={submitSearch}>
-                Search
+                Submit
             </button>
-            <h1 className='h1 py-3'>{results.title}</h1>
-            <p className='py-3'>{results.description}</p>
+            <h1 className='h1 py-3' data-testid='titleHeader'>{results.title}</h1>
+            <p className='py-3' data-testid='descriptonParagraph'>{results.description}</p>
           </div>
           <div className='col-md-8 p-4'>
-            <img src={imageURL} alt="Image" className="img-fluid" />
+            <img src={imageURL} alt="Image" className="img-fluid" data-testid='imageElement' />
           </div>
       </div>
       </div>
