@@ -71,18 +71,18 @@ function Search() {
               placeholder='Search'
               value={searchInput}
               onChange={handleSearchInputChange}
-              className='my-3'
+              className='my-3 searchBox'
             />
             <button 
-              className='btn btn-outline-primary'
+              className='btn btn-outline-primary submitButton'
               onClick={submitSearch}>
                 Submit
             </button>
-            <h1 className='h1 py-3' data-testid='titleHeader'>{results.title}</h1>
-            <p className='py-3' data-testid='descriptonParagraph'>{results.description}</p>
+            <h1 className='h1 py-3 titleHeader' data-testid='titleHeader'>{results.title}</h1>
+            <p className='py-3 descriptionParagraph' data-testid='descriptonParagraph'>{results.description}</p>
           </div>
           <div className='col-md-8 p-4'>
-            <img src={imageURL} alt="Image" className="img-fluid" data-testid='imageElement' />
+            <img src={imageURL} alt="Image" className="img-fluid imageElement" data-testid='imageElement' />
           </div>
       </div>
       </div>
